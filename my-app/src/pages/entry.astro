@@ -6,7 +6,10 @@ import App from '../components/react/miniapp/App.jsx';
 <Layout title={"entry of my app"}>
     <Navbar /> 
     <h1 class="text-center text-2xl font-bold p-4">Look at how we can have a react app here!!</h1>
-    <div class="flex items-center justify-center">
+    <section class="flex items-center justify-center mt-10">
         <App client:only="react" />
-    </div>
+    </section>
+    <section>
+        <h1 class="text-center text-2xl font-semibold p-6">While other parts are standard jsx/html</h1>
+    </section>
 </Layout>
