@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -11,12 +12,15 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+
+class Numbers(BaseModel):
+    number1: int
+    number2: int
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
 @app.post("/addNumbers")
-def add_numbers(number1: int, number2: int):
-    print(number1, number2)
-    return {"result": number1 + number2}
-
+def add_numbers(numbers: Numbers):
+    return {"result": numbers.number1 + numbers.number2}

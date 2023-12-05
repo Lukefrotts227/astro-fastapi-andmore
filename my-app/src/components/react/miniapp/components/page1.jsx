@@ -8,12 +8,14 @@ export default function Page1(){
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const num1 = parseInt(e.target.num1.value);
-        const num2 = parseInt(e.target.num2.value);
+        console.log(e.target.num1.value);
+        console.log(e.target.num2.value);
+        const number1 = parseInt(e.target.num1.value);
+        const number2 = parseInt(e.target.num2.value);
 
 
         try{
-            const response = await add_numbers(num1, num2);
+            const response = await add_numbers(number1, number2);
             setResult(response.result); 
         }catch(error){
             console.error('Error sending data to the server:', error);
