@@ -8,8 +8,8 @@ export default function Page1(){
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const num1 = parseInt(event.target.num1.value);
-        const num2 = parseInt(event.target.num2.value);
+        const num1 = parseInt(e.target.num1.value);
+        const num2 = parseInt(e.target.num2.value);
 
 
         try{
