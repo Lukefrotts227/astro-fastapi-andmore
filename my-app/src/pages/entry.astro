@@ -2,6 +2,7 @@
 import Layout from '../layouts/index.astro'; 
 import Navbar from '../components/astro/navbar.astro';
 import App from '../components/react/miniapp/App.jsx'; 
+import SvelteApp from '../components/svelte/miniapp/App.svelte';
 ---  
 <Layout title={"entry of my app"}>
     <Navbar /> 
@@ -12,4 +13,8 @@ import App from '../components/react/miniapp/App.jsx';
     <section>
         <h1 class="text-center text-2xl font-semibold p-6">While other parts are standard jsx/html</h1>
     </section>
+    <footer class="flex items-center justify-center mt-10">
+        <h1>Wow we also have a svelte app</h1>
+        <SvelteApp client:only="svelte" />
+    </footer>
 </Layout>

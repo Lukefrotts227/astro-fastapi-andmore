@@ -42,7 +42,7 @@ def response_basic(response: ResponseType):
     if response == 0: 
         return {"response": randint(0, 10)} 
     elif response == 1: 
-        pass 
+        return {"response": randint(0, 100)} 
     elif response == 2: 
         pass 
     elif response == 3:
