@@ -11,10 +11,10 @@ import SvelteApp from '../components/svelte/miniapp/App.svelte';
         <App client:only="react" />
     </section>
     <section>
-        <h1 class="text-center text-2xl font-semibold p-6">While other parts are standard jsx/html</h1>
+        <h1 class="text-center text-2xl font-semibold p-6 pb-9">While other parts are standard jsx/html</h1>
     </section>
+    <h1 class = "text-center text-2xl font-bold p-4">Wow we also have a svelte app</h1>
     <footer class="flex items-center justify-center mt-10">
-        <h1>Wow we also have a svelte app</h1>
         <SvelteApp client:only="svelte" />
     </footer>
 </Layout>
