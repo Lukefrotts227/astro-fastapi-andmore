@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/index.astro'; 
 import Navbar from '../components/astro/navbar.astro';
+import ChoiceForm from '../components/react/multiChoiceForm.jsx'; 
 ---
 
 <Layout title={"My App"}>
 	<Navbar />
 	<h1 class="text-center text-4xl font-extrabold pt-5">My App</h1>
-
+	<ChoiceForm client:only={"react"} />
+	
 </Layout>

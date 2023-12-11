@@ -13,3 +13,16 @@ export const add_numbers = async (number1, number2) => {
         throw error; // Or handle the error as needed
     }
 };
+
+export const response_basic = async (number) =>{
+    try{
+        const response = await axios.post(`${url}/responseBasic`, {
+            number
+        }); 
+        return response.data;
+
+    }catch(error){
+        console.error('Error making the request:', error); 
+        throw error; 
+    }
+}
